@@ -1,0 +1,58 @@
+﻿@model JamshidDashBoard.Models.Record
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Record</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Monitor.PersonName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Monitor.PersonName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PartikkelId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PartikkelId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PartikkelResult)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PartikkelResult)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HealtId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HealtId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HealtResult)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HealtResult)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.RecordId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

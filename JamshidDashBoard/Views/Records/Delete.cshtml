@@ -1,0 +1,64 @@
+﻿@model JamshidDashBoard.Models.Record
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Record</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Monitor.PersonName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Monitor.PersonName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PartikkelId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PartikkelId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PartikkelResult)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PartikkelResult)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HealtId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HealtId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HealtResult)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HealtResult)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

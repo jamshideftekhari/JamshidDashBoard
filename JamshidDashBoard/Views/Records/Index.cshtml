@@ -1,0 +1,57 @@
+﻿@model IEnumerable<JamshidDashBoard.Models.Record>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Monitor.PersonName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PartikkelId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PartikkelResult)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HealtId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HealtResult)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Monitor.PersonName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PartikkelId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PartikkelResult)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HealtId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HealtResult)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.RecordId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.RecordId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.RecordId })
+        </td>
+    </tr>
+}
+
+</table>
